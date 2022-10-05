@@ -1,0 +1,4 @@
+<h4>{{timeZone}}</h4>
+<p>{{isCurrent ? 'Jelenlegi időzóna :' : ''}}{{time}}</p>
+<button (click)="updateTime()">Frissités</button>
+<button (click)="changeTimeZoneClicked()" [disabled]="isCurrent">Jelenleginek jelöl</button>

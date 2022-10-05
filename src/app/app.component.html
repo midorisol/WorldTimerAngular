@@ -1,0 +1,11 @@
+
+<app-worldtimer
+  [timeZone]="'Europe/Budapest'"
+  [isCurrent]="selectedTimeZone === 'Europe/Budapest'"
+  (changeTimeZone)="updateSelectedTimeZone($event)"
+></app-worldtimer>
+<app-worldtimer
+  [timeZone]="'America/New_York'"
+  [isCurrent]="selectedTimeZone === 'America/New_York'"
+  (changeTimeZone)="updateSelectedTimeZone($event)"
+></app-worldtimer>
