@@ -1,4 +1,6 @@
-<h4>{{timeZone}}</h4>
-<p>{{isCurrent ? 'Jelenlegi időzóna :' : ''}}{{time}}</p>
+<div class="wrapper" [ngClass]="{current: isCurrent}">
+  <input type="text" [(ngModel)]="timeZone">
+<p>{{isCurrent ? 'Jelenlegi időzóna:' : ''}}{{time | date:'HH:mm:ss'}}</p>
 <button (click)="updateTime()">Frissités</button>
 <button (click)="changeTimeZoneClicked()" [disabled]="isCurrent">Jelenleginek jelöl</button>
+</div>

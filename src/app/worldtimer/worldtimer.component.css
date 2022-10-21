@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 12px;
+  border: 1px solid darkgray;
+  margin: 8px 0;
+}
+
+.wrapper.current {
+  background-color: lightblue;
+}

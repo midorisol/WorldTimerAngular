@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+button {
+  background-color: darkblue;
+  color:white;
+  border-color:transparent;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 0 4px;
+}

@@ -1,11 +1,9 @@
-
-<app-worldtimer
-  [timeZone]="'Europe/Budapest'"
-  [isCurrent]="selectedTimeZone === 'Europe/Budapest'"
-  (changeTimeZone)="updateSelectedTimeZone($event)"
-></app-worldtimer>
-<app-worldtimer
-  [timeZone]="'America/New_York'"
-  [isCurrent]="selectedTimeZone === 'America/New_York'"
-  (changeTimeZone)="updateSelectedTimeZone($event)"
-></app-worldtimer>
+<ng-container *ngFor="let timezone of displayedTimezones">
+<app-worldtimer [timeZone]="timezone"
+[isCurrent]="selectedTimeZone === timezone"
+(changeTimeZone)="updateSelectedTimeZone($event)"></app-worldtimer>
+</ng-container>
+<div *ngIf="displayedTimezones.length < 5">
+  <br>
+  <button (click)="addNewTimezone()">Új hozzáadása</button>
+</div>
